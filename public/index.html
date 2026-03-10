@@ -19,7 +19,7 @@
     
     <img src="https://placecage.lucidinternets.com/g/200/300" alt="nick" onload="loaded()">
 
-    <script>
+    <!-- <script>
       function alertFun(){
         alert("Hello !");
       }
@@ -64,11 +64,11 @@
       const result = document.querySelector('#result');
       result.innerHTML = '<h2>My Span</h2>';
       result.style.color = 'blue';
-    </script>
+    </script> -->
 
    
     <script>
-      function myFun(){
+      /* function myFun(){
         alert("hello");  
       }
     
@@ -92,11 +92,29 @@
       myBtn.addEventListener("mouseover", logEventType);//logs 'mouseover'
       myBtn.addEventListener("mouseout", logEventType);// logs 'mouseout'
      //these events will fire when the mouse pointer hovers/passes over the button
-    
+     */
     
     function loaded(){
       console.log('img loaded');
     }  
+
+    let myobj = {};
+    let obj2 = myobj;
+    
+    //obj2 and myobj are the same variable
+    
+    obj2.name = "Shelly";
+    
+    console.log(myobj.name);//Shelly
+    
+    //if you need to create a new object and copy its values use Object.assign
+    
+    let obj3 = {};
+    Object.assign(obj3, myobj);
+    
+    obj3.name = 'Smith';
+    
+    console.log(myobj.name, obj3.name);//Shelly, Smith
     </script>
 
 
